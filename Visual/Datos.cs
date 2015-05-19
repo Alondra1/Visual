@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class Form1 : Form
+    public partial class Datos : Form
     {
-        public Form1()
+        public Datos()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Admin ad = new Admin();
-            ad.Show();
         }
     }
 }

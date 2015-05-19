@@ -9,17 +9,18 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class Form1 : Form
+    public partial class Admin : Form
     {
-        public Form1()
+        public Admin()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void insertarNuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin();
-            ad.Show();
+            Datos d = new Datos();
+
+            d.ShowDialog();
         }
     }
 }

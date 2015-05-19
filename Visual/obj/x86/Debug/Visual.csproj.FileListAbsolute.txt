@@ -1,0 +1,10 @@
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\bin\Debug\Visual.exe
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\bin\Debug\Visual.pdb
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.csprojResolveAssemblyReference.cache
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.Admin.resources
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.Form1.resources
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.Properties.Resources.resources
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.csproj.GenerateResource.Cache
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.exe
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.pdb
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.Datos.resources
