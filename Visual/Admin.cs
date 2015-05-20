@@ -109,6 +109,12 @@ namespace Visual
             cmd3.Connection.Close();
         }
 
+       
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

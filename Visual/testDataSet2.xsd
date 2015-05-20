@@ -118,7 +118,16 @@ limit 5</CommandText>
               <Mapping SourceColumn="puntos" DataSetColumn="puntos" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="testConnectionString1 (Settings)" DbObjectName="test.historial" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="historia" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="historia" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="historia">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  * from historial</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

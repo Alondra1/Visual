@@ -107,7 +107,8 @@ namespace Visual
                     cmd.ExecuteNonQuery();
 
                     
-                        MessageBox.Show("Registro Exitoso");
+                        MessageBox.Show("Registro Exitoso", "Registro", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
 
                     
