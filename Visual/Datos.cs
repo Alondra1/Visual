@@ -88,6 +88,7 @@ namespace Visual
                 {
                     this.connection =
                         new MySqlConnection(conexion);
+                    this.connection.Open();
 
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = this.connection;
@@ -103,20 +104,20 @@ namespace Visual
                     cmd.Parameters.AddWithValue("@puntos", puntos);
                     cmd.Parameters.AddWithValue("@fecha", fecha);
 
-                    int n = -1;
-                    n = cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                    if (n != -1)
-                    {
+                    
                         MessageBox.Show("Registro Exitoso");
                         this.Close();
 
-                    }
+                    
 
                 }
                 catch (MySqlException ex)
                 {
-                    Console.WriteLine(ex.StackTrace);
+                    //Console.WriteLine(ex.StackTrace);
+                    MessageBox.Show(ex.ToString());
+                    this.connection.Close();
                 }
             }
         }

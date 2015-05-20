@@ -63,7 +63,19 @@
               <Mapping SourceColumn="puntos" DataSetColumn="puntos" />
               <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="testConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nombre, km, tipo, puntos, fecha
+FROM    datos
+ORDER BY km DESC
+limit 5</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="historialTableAdapter" GeneratorDataComponentClassName="historialTableAdapter" Name="historial" UserDataComponentName="historialTableAdapter">
             <MainSource>

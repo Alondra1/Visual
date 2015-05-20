@@ -60,7 +60,8 @@ namespace Visual
 
                 reader = cmd.ExecuteReader();
                 reader.Read();
-                MessageBox.Show(reader.GetString(0));
+                MessageBox.Show("Bienvenido(a) " + reader.GetString(0), 
+                    "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (reader != null)
                     return true;
                 else
@@ -69,7 +70,7 @@ namespace Visual
             catch (MySqlException e)
             {
                 //Console.WriteLine("Error: {0} ", e.ToString());
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
                 connection.Close();
                 return false;
 

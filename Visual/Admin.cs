@@ -38,8 +38,7 @@ namespace Visual
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'testDataSet2.datos' Puede moverla o quitarla según sea necesario.
-            this.datosTableAdapter1.Fill(this.testDataSet2.datos);
+            
             
 
         }
@@ -51,7 +50,7 @@ namespace Visual
 
         private void top5XKmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.datosTableAdapter1.Fill(this.testDataSet2.datos);
+            this.datosTableAdapter1.FillBy(this.testDataSet2.datos);
         }
 
 
