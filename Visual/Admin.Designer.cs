@@ -37,13 +37,6 @@
             this.corteDeMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.testDataSet2 = new Visual.testDataSet2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testDataSet = new Visual.testDataSet();
@@ -52,16 +45,23 @@
             this.testDataSet1 = new Visual.testDataSet();
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminTableAdapter = new Visual.testDataSetTableAdapters.adminTableAdapter();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.testDataSet2 = new Visual.testDataSet2();
             this.datosTableAdapter1 = new Visual.testDataSet2TableAdapters.datosTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -112,6 +112,7 @@
             this.corteDeMesToolStripMenuItem.Name = "corteDeMesToolStripMenuItem";
             this.corteDeMesToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.corteDeMesToolStripMenuItem.Text = "Corte de mes";
+            this.corteDeMesToolStripMenuItem.Click += new System.EventHandler(this.corteDeMesToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -135,46 +136,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(549, 266);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // kmDataGridViewTextBoxColumn
-            // 
-            this.kmDataGridViewTextBoxColumn.DataPropertyName = "km";
-            this.kmDataGridViewTextBoxColumn.HeaderText = "km";
-            this.kmDataGridViewTextBoxColumn.Name = "kmDataGridViewTextBoxColumn";
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            // 
-            // puntosDataGridViewTextBoxColumn
-            // 
-            this.puntosDataGridViewTextBoxColumn.DataPropertyName = "puntos";
-            this.puntosDataGridViewTextBoxColumn.HeaderText = "puntos";
-            this.puntosDataGridViewTextBoxColumn.Name = "puntosDataGridViewTextBoxColumn";
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            // 
-            // datosBindingSource1
-            // 
-            this.datosBindingSource1.DataMember = "datos";
-            this.datosBindingSource1.DataSource = this.testDataSet2;
-            // 
-            // testDataSet2
-            // 
-            this.testDataSet2.DataSetName = "testDataSet2";
-            this.testDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -220,6 +181,46 @@
             // 
             this.adminTableAdapter.ClearBeforeFill = true;
             // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // kmDataGridViewTextBoxColumn
+            // 
+            this.kmDataGridViewTextBoxColumn.DataPropertyName = "km";
+            this.kmDataGridViewTextBoxColumn.HeaderText = "km";
+            this.kmDataGridViewTextBoxColumn.Name = "kmDataGridViewTextBoxColumn";
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            // 
+            // puntosDataGridViewTextBoxColumn
+            // 
+            this.puntosDataGridViewTextBoxColumn.DataPropertyName = "puntos";
+            this.puntosDataGridViewTextBoxColumn.HeaderText = "puntos";
+            this.puntosDataGridViewTextBoxColumn.Name = "puntosDataGridViewTextBoxColumn";
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // datosBindingSource1
+            // 
+            this.datosBindingSource1.DataMember = "datos";
+            this.datosBindingSource1.DataSource = this.testDataSet2;
+            // 
+            // testDataSet2
+            // 
+            this.testDataSet2.DataSetName = "testDataSet2";
+            this.testDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // datosTableAdapter1
             // 
             this.datosTableAdapter1.ClearBeforeFill = true;
@@ -239,13 +240,13 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
