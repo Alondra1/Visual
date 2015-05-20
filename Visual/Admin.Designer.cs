@@ -70,6 +70,7 @@
             this.top5XKmToolStripMenuItem.Name = "top5XKmToolStripMenuItem";
             this.top5XKmToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.top5XKmToolStripMenuItem.Text = "Top 5 x Km";
+            this.top5XKmToolStripMenuItem.Click += new System.EventHandler(this.top5XKmToolStripMenuItem_Click);
             // 
             // top3XPuntosToolStripMenuItem
             // 
@@ -82,6 +83,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Admin
             // 
@@ -92,6 +94,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Admin";
             this.Text = "Admin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_FormClosed);
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
