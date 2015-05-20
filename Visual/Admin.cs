@@ -27,8 +27,7 @@ namespace Visual
         private void insertarNuevoRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Datos d = new Datos();
-
-            d.ShowDialog();
+            d.ShowDialog(this);
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

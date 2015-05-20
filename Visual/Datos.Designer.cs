@@ -113,6 +113,7 @@
             // 
             // Datos
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 270);
@@ -124,10 +125,12 @@
             this.Controls.Add(this.combTipo);
             this.Controls.Add(this.txtKm);
             this.Controls.Add(this.txtName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Datos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Datos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Datos_FormClosing);
             this.Load += new System.EventHandler(this.Datos_Load);
