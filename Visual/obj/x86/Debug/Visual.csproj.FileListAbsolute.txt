@@ -8,3 +8,4 @@ C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debu
 C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.exe
 C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.pdb
 C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\obj\x86\Debug\Visual.Datos.resources
+C:\Users\Dorlan\Documents\Visual Studio 2010\Projects\Visual\Visual\bin\Debug\Visual.exe.config

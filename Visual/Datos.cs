@@ -13,7 +13,7 @@ namespace Visual
     public partial class Datos : Form
     {
         MySqlConnection connection = null;
-        String conexion = @"server=127.0.0.1;uid=root;pwd=toor;database=javi;port=3306";
+        String conexion = @"server=127.0.0.1;uid=root;pwd=toor;database=test;port=3306";
 
         public Datos()
         {
@@ -32,6 +32,9 @@ namespace Visual
 
         {
             int error = 0;
+            int puntos = 0;
+            string fecha = DateTime.Now.ToShortDateString();
+
             if (txtName.Text != "" && txtKm.Text != "" && combTipo.Text != "")
             {
                 char[] c = txtKm.Text.ToCharArray();
@@ -51,7 +54,7 @@ namespace Visual
 
                 if (error == 0)
                 {
-                    int puntos = 0;
+                    
 
                     if (combTipo.Text.Equals("Bicicleta"))
                         puntos = Convert.ToInt32(txtKm.Text) * 1;
@@ -66,7 +69,7 @@ namespace Visual
                         error++;
                     }
 
-                    string fecha = DateTime.Now.ToShortDateString();
+                    
 
                 }
 
@@ -85,8 +88,20 @@ namespace Visual
                 {
                     this.connection =
                         new MySqlConnection(conexion);
-                    MySqlCommand cmd = new MySqlCommand("insert into datos (nombre, km, tipo, puntos, fecha) " +
-                        "values (txtName.Text, txtKm.Text, combTipo.Text, puntos, fecha);", connection);
+
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.Connection = this.connection;
+
+                    string instruccion = "INSERT INTO datos (nombre, km, tipo, puntos, fecha)" +
+                        " VALUES (@nombre, @km, @tipo, @puntos, @fecha);";
+
+                    cmd.CommandText = instruccion;
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@nombre", txtName.Text);
+                    cmd.Parameters.AddWithValue("@km", Convert.ToInt32(txtKm.Text));
+                    cmd.Parameters.AddWithValue("@tipo", combTipo.Text);
+                    cmd.Parameters.AddWithValue("@puntos", puntos);
+                    cmd.Parameters.AddWithValue("@fecha", fecha);
 
                     int n = -1;
                     n = cmd.ExecuteNonQuery();

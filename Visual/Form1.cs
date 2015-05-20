@@ -14,6 +14,7 @@ namespace Visual
     {
         MySqlConnection connection = null;
         MySqlDataReader reader = null;
+        string conexion = @"server=127.0.0.1;uid=root;pwd=toor;database=test;port=3306";
 
 
         public Form1()
@@ -35,20 +36,31 @@ namespace Visual
                         "Error de autenticacíon", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
-            this.Visible = false;
+            /*this.Visible = false;
             Admin ada = new Admin(this);
             ada.Show();
+             * */
         }
 
 
         private Boolean existe(string n, string pass)
         {
             reader = null;
-            string consulta = "select * from admin where nombre=n AND contrasena=pass";
+            string consulta = "select * from admin where nombre=@n AND contrasena=@pass";
             try
             {
-                MySqlCommand cmd = new MySqlCommand(consulta, connection);
+                connection = new MySqlConnection(conexion);
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.connection;
+                cmd.CommandText = consulta;
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@n", txtNombre.Text);
+                cmd.Parameters.AddWithValue("@pass", txtPass.Text);
+
                 reader = cmd.ExecuteReader();
+                reader.Read();
+                MessageBox.Show(reader.GetString(0));
                 if (reader != null)
                     return true;
                 else
@@ -56,7 +68,9 @@ namespace Visual
             }
             catch (MySqlException e)
             {
-                Console.WriteLine("Error: {0} ", e.ToString());
+                //Console.WriteLine("Error: {0} ", e.ToString());
+                MessageBox.Show(e.ToString());
+                connection.Close();
                 return false;
 
             }

@@ -15,7 +15,7 @@ namespace Visual
 
         MySqlConnection connection = null;
         MySqlDataReader reader = null;
-        string conexion = @"server=127.0.0.1;uid=root;pwd=toor;database=javi;port=3306";
+        string conexion = @"server=127.0.0.1;uid=root;pwd=toor;database=test;port=3306";
         Form parent = null;
 
         public Admin(Form f)
@@ -38,6 +38,9 @@ namespace Visual
 
         private void Admin_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'testDataSet2.datos' Puede moverla o quitarla según sea necesario.
+            this.datosTableAdapter1.Fill(this.testDataSet2.datos);
+            
 
         }
 
@@ -48,16 +51,7 @@ namespace Visual
 
         private void top5XKmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.connection = new MySqlConnection(conexion);
-            string consulta = "SELECT * FROM DATOS ORDER BY km DESC LIMIT 5";
-
-            MySqlCommand cmd = new MySqlCommand(consulta, connection);
-            this.reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-
-            }
+            this.datosTableAdapter1.Fill(this.testDataSet2.datos);
         }
 
 
