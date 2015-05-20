@@ -37,12 +37,14 @@
             this.corteDeMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.testDataSet2 = new Visual.testDataSet2();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.datosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testDataSet = new Visual.testDataSet();
             this.datosTableAdapter = new Visual.testDataSetTableAdapters.datosTableAdapter();
@@ -50,18 +52,16 @@
             this.testDataSet1 = new Visual.testDataSet();
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminTableAdapter = new Visual.testDataSetTableAdapters.adminTableAdapter();
-            this.testDataSet2 = new Visual.testDataSet2();
-            this.datosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.datosTableAdapter1 = new Visual.testDataSet2TableAdapters.datosTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -105,6 +105,7 @@
             this.top3XPuntosToolStripMenuItem.Name = "top3XPuntosToolStripMenuItem";
             this.top3XPuntosToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.top3XPuntosToolStripMenuItem.Text = "Top 3 x puntos";
+            this.top3XPuntosToolStripMenuItem.Click += new System.EventHandler(this.top3XPuntosToolStripMenuItem_Click);
             // 
             // corteDeMesToolStripMenuItem
             // 
@@ -135,14 +136,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(549, 266);
             this.dataGridView1.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 44);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 306);
-            this.panel1.TabIndex = 4;
-            // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
@@ -172,6 +165,24 @@
             this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
             this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
             this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // datosBindingSource1
+            // 
+            this.datosBindingSource1.DataMember = "datos";
+            this.datosBindingSource1.DataSource = this.testDataSet2;
+            // 
+            // testDataSet2
+            // 
+            this.testDataSet2.DataSetName = "testDataSet2";
+            this.testDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(12, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(801, 306);
+            this.panel1.TabIndex = 4;
             // 
             // datosBindingSource
             // 
@@ -209,16 +220,6 @@
             // 
             this.adminTableAdapter.ClearBeforeFill = true;
             // 
-            // testDataSet2
-            // 
-            this.testDataSet2.DataSetName = "testDataSet2";
-            this.testDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // datosBindingSource1
-            // 
-            this.datosBindingSource1.DataMember = "datos";
-            this.datosBindingSource1.DataSource = this.testDataSet2;
-            // 
             // datosTableAdapter1
             // 
             this.datosTableAdapter1.ClearBeforeFill = true;
@@ -238,13 +239,13 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -50,7 +50,12 @@ namespace Visual
 
         private void top5XKmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.datosTableAdapter1.FillBy(this.testDataSet2.datos);
+            this.datosTableAdapter1.top5(this.testDataSet2.datos);
+        }
+
+        private void top3XPuntosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.datosTableAdapter1.top3(this.testDataSet2.datos);
         }
 
 
